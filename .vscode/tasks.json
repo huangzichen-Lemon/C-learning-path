@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C: build active file",
+            "type": "process",
+            "command": "${workspaceFolder}/.tools/mingw64/bin/gcc.exe",
+            "args": ["-std=c17", "-Wall", "-Wextra", "-Wpedantic", "-g", "-O0", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}.exe"],
+            "options": {
+                "cwd": "${fileDirname}",
+                "env": { "PATH": "${workspaceFolder}\\.tools\\mingw64\\bin;${env:PATH}" }
+            },
+            "problemMatcher": ["$gcc"],
+            "group": { "kind": "build", "isDefault": true }
+        }
+    ]
+}
