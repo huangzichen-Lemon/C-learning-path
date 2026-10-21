@@ -24,6 +24,8 @@ int main(void)
         a = a * c - b;
         b = b * c;
         printf("%d/%d+", 1, c);
+
+        
     }
     if (b % a == 0)
         {
