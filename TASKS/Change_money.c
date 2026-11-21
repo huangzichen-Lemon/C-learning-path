@@ -12,16 +12,23 @@
 
 示例输出：
 81*/
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int i1,i2,n,i;
-    scanf("%d",&n);
-    i1=n/10;
-    i2=n/5;
-    for(i=1;i<=i1;i++)
+    int n, t1, t2, i, t, num = 0;
+    scanf("%d", &n);
+    t1 = n / 10;
+    for (i = 1; i <= t1; i++)
+    {
+        t2 = (n - i * 10) / 5;
+
         {
-            temp=
+            for (t = 1; t <= t2; t++)
+                if ((i * 10 + t * 5) != n)
+                    num++;
         }
-    
+    }
+    printf("%d", num);
+    return 0;
 }
+/*经验：要是看代码看不出错误，看一下题目看一下有没有漏掉条件*/
